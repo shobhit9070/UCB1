@@ -48,16 +48,11 @@ def run_experiment(m1,m2,m3,eps,N):
         
         cumulative_average = np.cumsum(data)/(np.arange(N)+1)
         plt.plot(cumulative_average)
-       # plt.plot(np.ones(N)*m1)
-        #plt.plot(np.ones(N)*m2)
-        #plt.plot(np.ones(N)*m3)
-       # plt.xscale('log')
         plt.show()
         for b in bandits:
-            mean_list.append(b.mean)
             print(b.mean)
         return cumulative_average
-        print(mean_list)
+    
 
 
 if __name__ == '__main__':
@@ -71,5 +66,3 @@ if __name__ == '__main__':
     plt.legend(["c1",
   "c2","c3"], loc ="lower right")
     plt.show()
-    # plt.xscale('log')
-    # plt.show()
